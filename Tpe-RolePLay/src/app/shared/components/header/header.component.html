@@ -1,0 +1,18 @@
+<nav class="navbar">
+  <div class="left">
+    <button class="menu-button" (click)="toggleMenu()">&#9776;</button>
+    <app-menu [isOpen]="isOpen" [ngClass]="{ 'open': isOpen }"></app-menu>
+    <section class="search-bar">
+      <img src="assets/svgs/search.svg">
+      <input type="text" class="search-input" placeholder="'GTA V'">
+    </section>
+  </div>
+  <a href="/Tpe-Interfases-Tudai2023/home"><img src="assets/images/Logo.png" style="width: 100px;"></a>
+  <div class="right">
+
+    <button class="avatar" (click)="togglePerfilMenu()"></button>
+    <app-perfil-menu [isOpenPerfil]="isOpenPerfil" [ngClass]="{ 'open': isOpenPerfil }"></app-perfil-menu>
+    <span class="user-name"><span style="font-size: 12px;">Bienvenido,</span> Carlitos</span>
+  </div>
+</nav>
+<app-progress-bar [progress]="0"></app-progress-bar>

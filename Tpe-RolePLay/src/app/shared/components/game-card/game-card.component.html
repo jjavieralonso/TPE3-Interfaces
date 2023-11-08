@@ -1,0 +1,15 @@
+<div class="card">
+    <div class="image-container">
+        <img [src]="imageUrl" alt="{{ name }}" class="card-image">
+        <div class="price-badge">
+            <p class="card-price">{{ finalPrice }}</p>
+        </div>
+    </div>
+    <section class="card-body">
+        <h3 class="card-name">{{ name }}</h3>
+          <div *ngIf="finalPrice.toUpperCase() === 'GRATIS'" class="play-button">
+            <div class="arrow"></div>
+        </div>
+        <img  *ngIf="finalPrice.toUpperCase() !== 'GRATIS'" src="assets/svgs/addtocart.svg" class="cart-img">
+    </section>
+</div>
